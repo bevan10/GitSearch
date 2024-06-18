@@ -11,6 +11,7 @@ const Nav = ({ setUser }) => {
     const res = await fetch(`https://api.github.com/users/${value}`);
 
     const data = await res.json();
+    console.log(data);
     setUser(data);
     setValue("");
   };
@@ -31,8 +32,7 @@ const Nav = ({ setUser }) => {
           />
           <button
             className=" bg-red-600  px-4 py-2 hover:bg-red-400 h-[41]"
-            type="submit"
-          >
+            type="submit">
             Search
           </button>
         </form>
